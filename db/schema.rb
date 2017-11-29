@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 20171129152216) do
 
   create_table "heros", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", limit: 100, null: false
-    t.string "real_name", limit: 100
-    t.integer "health"
-    t.integer "armour"
-    t.integer "shield"
+    t.string "real_name", limit: 100, null: false
+    t.integer "health", null: false
+    t.integer "armour", null: false
+    t.integer "shield", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
