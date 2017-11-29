@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json } do
     scope module: :v1 do
-      resources :heroes
+      resources :heroes, only: [:index, :show] do
+        member do
+          get :abilities
+        end
+      end
+      resources :abilities, only: [:index, :show]
     end
   end
 end
