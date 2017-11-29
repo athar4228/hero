@@ -10,6 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171129152216) do
+
+  create_table "heros", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", limit: 100, null: false
+    t.string "real_name", limit: 100
+    t.integer "health"
+    t.integer "armour"
+    t.integer "shield"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
